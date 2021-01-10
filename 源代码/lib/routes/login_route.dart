@@ -60,15 +60,19 @@ class _LoginRouteState extends State<LoginRoute> {
       appBar: AppBar(
         title: Text('登录'),
       ),
-      body: Form(
-        child: Scrollbar(
-          child: SingleChildScrollView(
-            padding: EdgeInsets.all(16),
-            child: Column(
-              children: formItems,
+      body: Stack(
+        children: [
+          Form(
+            child: Scrollbar(
+              child: SingleChildScrollView(
+                padding: EdgeInsets.all(16),
+                child: Column(
+                  children: formItems,
+                ),
+              ),
             ),
           ),
-        ),
+        ],
       ),
     );
   }
